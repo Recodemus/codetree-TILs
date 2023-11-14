@@ -9,8 +9,6 @@ int main() {
     char arr[100];
     int i, j, n;
 
-    scanf("%d", &n);
-
     scanf("%s", arr);
 
     n = strlen(arr);
@@ -31,7 +29,7 @@ void sort(char a[], int len)
 {
     int i, j;
 
-    for(i = 0;i < len-1;i++)
+    for(i = 0;i < len;i++)
     {
         for(j = 0;j < len;j++)
         {
