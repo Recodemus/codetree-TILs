@@ -62,7 +62,7 @@ int main() {
         printf("No\n");
     }
 
-    else
+    if(sw==1)
     {
         printf("Yes\n");
     }
