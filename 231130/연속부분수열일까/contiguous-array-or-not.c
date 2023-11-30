@@ -1,61 +1,79 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void input(int *p,int k)
+void input(int len, int *arr)
 {
-    int i;
-    for(i=0;i<k;i++)
+    int i;  //for문
+
+    for(i = 0;i < len;i++)  //배열 입력
     {
-        scanf("%d", &p[i]);
+        scanf("%d ", &arr[i]);
     }
 }
 
-int fun(int *x, int *y, int n, int m)
+int fun(int len1, int len2, int *p1, int *p2)
 {
-    int i, j=1, start,answer=0;
-    for(i=0;i<n;i++)
+    int i, j = 0;    //for문
+    int start;   //시작
+
+    for(i = 0;i < len1;i++)
     {
-        if(x[i]==y[0])
+        if(p1[i] == p2[0])
         {
-            start=i;
+            start = i;
             break;
         }
-    }
-    if(m-start)
-    {
-        return printf("No");
+
+        else
+        {
+            return 0;
+        }
     }
 
-    for(i=start+1;i<n;i++)
-    {
-        j++;
-        if(x[i]!=y[start+j])
+    for(i = start;i < len1;i++)
         {
-            return printf("No");
+            if(p1[i + 1] != p2[1])
+            {
+                return 0;
+            }
+
+            else
+            {
+                return 1;
+            }
         }
-        return printf("Yes");
-    }
+
+
 }
 
-int main() {
+int main()
+{
+    int n1, n2; //두 수열의 원소 개수
+    int *a, *b;   //수열
+    int sw;
 
-    int n,m;
-    int i,j;
-    int *p1,*p2;
-    int sw=1;
+    scanf("%d %d",&n1, &n2);  //원소 개수 입력
 
-    scanf("%d %d", &n, &m);
+    a = (int *)malloc(sizeof(int) * n1);    //수열 a
+    b = (int *)malloc(sizeof(int) * n2);    //수열 b
 
-    p1=(int *)malloc(sizeof(int)*n);
-    p2=(int *)malloc(sizeof(int)*m);
+    input(n1, a);
+    input(n2, b);
 
-    input(p1,n);
-    input(p2,m);
+    sw = fun(n1, n2, a, b);
 
-    sw=fun(p1, p2, n, m);
+    if(sw == 1)
+    {
+        printf("Yes");
+    }
 
-    free(p1);
-    free(p2);
+    else
+    {
+        printf("No");
+    }
+
+    free(a);
+    free(b);
 
     return 0;
 }
