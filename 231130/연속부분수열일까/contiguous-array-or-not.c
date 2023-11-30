@@ -23,17 +23,17 @@ int fun(int *x, int *y, int n, int m)
     }
     if(m-start)
     {
-        return 0;
+        return printf("No");
     }
 
     for(i=start+1;i<n;i++)
     {
         j++;
-        if(x[i]==y[start+j])
+        if(x[i]!=y[start+j])
         {
-            return 1;
+            return printf("No");
         }
-        return 0;
+        return printf("Yes");
     }
 }
 
@@ -53,16 +53,6 @@ int main() {
     input(p2,m);
 
     sw=fun(p1, p2, n, m);
-
-    if(sw==1)
-    {
-        printf("Yes\n");
-    }
-
-    else
-    {
-        printf("No\n");
-    }
 
     free(p1);
     free(p2);
