@@ -28,16 +28,14 @@ int fun(int *x, int *y, int n, int m)
 
     else
     {
-        num=1;
-        return num;
+        return 1;
     }
 
     for(i=start+1;i<n;i++,j++)
     {
         if(x[i]!=y[start+j])
         {
-            num=1;
-            return num;
+            return 1;
         }
     }
 }
