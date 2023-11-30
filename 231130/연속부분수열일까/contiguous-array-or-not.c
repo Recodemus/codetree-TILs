@@ -12,7 +12,7 @@ void input(int *p,int k)
 
 int fun(int *x, int *y, int n, int m)
 {
-    int i, j=1, start;
+    int i, j=1, start, num;
     for(i=0;i<n;i++)
     {
         if(x[i]==y[0])
@@ -30,7 +30,8 @@ int fun(int *x, int *y, int n, int m)
     {
         if(x[i]!=y[start+j])
         {
-            return 1;
+            num=1;
+            return num;
         }
     }
 }
