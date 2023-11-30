@@ -35,7 +35,7 @@ int fun(int *x, int *y, int n, int m)
         
         else
         {
-            return 1;
+            break;
         }
     }
 }
