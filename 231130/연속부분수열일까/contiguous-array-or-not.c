@@ -23,14 +23,14 @@ int fun(int *x, int *y, int n, int m)
     }
     if(m-start)
     {
-        return answer;
+        return 0;
     }
 
     for(i=start+1;i<n;i++,j++)
     {
         if(x[i]!=y[start+j])
         {
-            return answer;
+            return 0;
         }
         
         else
