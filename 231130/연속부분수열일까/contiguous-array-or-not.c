@@ -33,6 +33,11 @@ int fun(int len1, int len2, int *p1, int *p2)
 
     for(i = start;i < len1;i++)
         {
+            if(i == start)
+            {
+                continue;
+            }
+            
             if(p1[i + 1] != p2[1])
             {
                 printf("No");
