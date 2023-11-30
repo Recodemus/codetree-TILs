@@ -26,6 +26,7 @@ int fun(int len1, int len2, int *p1, int *p2)
 
         else
         {
+            printf("No");
             return 0;
         }
     }
@@ -34,12 +35,14 @@ int fun(int len1, int len2, int *p1, int *p2)
         {
             if(p1[i + 1] != p2[1])
             {
+                printf("No");
                 return 0;
             }
 
             else
             {
-                return 1;
+                printf("Yes");
+                return 0;
             }
         }
 
@@ -50,7 +53,6 @@ int main()
 {
     int n1, n2; //두 수열의 원소 개수
     int *a, *b;   //수열
-    int sw;
 
     scanf("%d %d",&n1, &n2);  //원소 개수 입력
 
@@ -60,17 +62,7 @@ int main()
     input(n1, a);
     input(n2, b);
 
-    sw = fun(n1, n2, a, b);
-
-    if(sw == 1)
-    {
-        printf("Yes");
-    }
-
-    else
-    {
-        printf("No");
-    }
+    fun(n1, n2, a, b);
 
     free(a);
     free(b);
