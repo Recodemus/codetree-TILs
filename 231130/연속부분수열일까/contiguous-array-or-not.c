@@ -25,6 +25,11 @@ int fun(int len1, int len2, int* p1, int* p2)
         }
     }
 
+    if (len1 < len2)
+    {
+        return 0;
+    }
+
     for (i = start; i < len1; i++)
     {
         if (p1[start + 1] != p2[1])
