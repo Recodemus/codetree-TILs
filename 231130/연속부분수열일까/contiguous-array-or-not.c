@@ -26,6 +26,12 @@ int fun(int *x, int *y, int n, int m)
         return 0;
     }
 
+    else
+    {
+        num=1;
+        return num;
+    }
+
     for(i=start+1;i<n;i++,j++)
     {
         if(x[i]!=y[start+j])
