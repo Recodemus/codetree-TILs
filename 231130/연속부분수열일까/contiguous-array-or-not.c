@@ -45,7 +45,7 @@ int main() {
     int n,m;
     int i,j;
     int *p1,*p2;
-    int sw;
+    int sw=1;
 
     scanf("%d %d", &n, &m);
 
