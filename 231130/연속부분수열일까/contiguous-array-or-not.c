@@ -41,8 +41,12 @@ int fun(int len1, int len2, int* p1, int* p2)
         {
             return 0;
         }
+
+        else
+        {
+            return 1;
+        }
     }
-    return 1;
 }
 
 int main()
