@@ -16,7 +16,7 @@ int fun(int len1, int len2, int* p1, int* p2)
     int i, j = 0;    //for문
     int start;   //시작
 
-    for (i = 0; i < len1; i++)
+    for (i = 0; i <= len1; i++)
     {
         if (p1[i] == p2[0])
         {
@@ -24,9 +24,14 @@ int fun(int len1, int len2, int* p1, int* p2)
             break;
         }
 
-        if (len1 < len2)
+        if (i == len1)
         {
             return 0;
+        }
+
+        else
+        {
+            continue;
         }
     }
 
