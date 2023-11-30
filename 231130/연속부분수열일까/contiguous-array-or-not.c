@@ -38,21 +38,17 @@ int fun(int len1, int len2, int *p1, int *p2)
                 continue;
             }
 
-            if(p1[i + 1] != p2[1])
+            if(p1[i + 1] == p2[1])
             {
-                printf("No");
+                printf("Yes");
                 return 0;
             }
 
             else
             {
-                continue;
+                printf("No");
             }
         }
-
-        printf("Yes");
-
-
 }
 
 int main()
