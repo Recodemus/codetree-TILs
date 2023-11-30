@@ -30,11 +30,8 @@ int fun(int *x, int *y, int n, int m)
     {
         if(x[i]!=y[start+j])
         {
-            return 0;
-        }
-
-        else
             return 1;
+        }
     }
 }
 
