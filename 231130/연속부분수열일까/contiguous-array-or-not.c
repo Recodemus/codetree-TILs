@@ -52,7 +52,7 @@ int main() {
 
     sw=fun(p1, p2, n, m);
 
-    if(sw==1)
+    if(sw!=0)
     {
         printf("Yes\n");
     }
