@@ -51,7 +51,7 @@ int main() {
     input(p1,n);
     input(p2,m);
 
-    fun(p1, p2, n, m);
+    sw=fun(p1, p2, n, m);
 
     if(sw==1)
     {
