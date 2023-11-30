@@ -53,14 +53,14 @@ int main() {
 
     sw=fun(p1, p2, n, m);
 
-    if(sw!=0)
+    if(sw==0)
     {
-        printf("Yes\n");
+        printf("No\n");
     }
 
     else
     {
-        printf("No\n");
+        printf("Yes\n");
     }
 
     free(p1);
