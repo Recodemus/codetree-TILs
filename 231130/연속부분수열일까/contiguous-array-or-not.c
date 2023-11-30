@@ -32,11 +32,7 @@ int fun(int *x, int *y, int n, int m)
         {
             return 0;
         }
-        
-        else
-        {
-            break;
-        }
+        return -1;
     }
 }
 
@@ -62,7 +58,7 @@ int main() {
         printf("No\n");
     }
 
-    if(sw==1)
+    else
     {
         printf("Yes\n");
     }
