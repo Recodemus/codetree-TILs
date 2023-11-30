@@ -10,7 +10,7 @@ void input(int *p,int k)
     }
 }
 
-int fun(int *x, int *y, int n, int m, int *sw)
+int fun(int *x, int *y, int n, int m, int *answer)
 {
     int i, j=1, start, num;
     for(i=0;i<n;i++)
@@ -23,16 +23,16 @@ int fun(int *x, int *y, int n, int m, int *sw)
     }
     if(m-start)
     {
-        *sw=0;
-        return *sw;
+        *answer=0;
+        return *answer;
     }
 
     for(i=start+1;i<n;i++,j++)
     {
         if(x[i]!=y[start+j])
         {
-            *sw=1;
-            return *sw;
+            *answer=1;
+            return *answer;
         }
     }
 }
